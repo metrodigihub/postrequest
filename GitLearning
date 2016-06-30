@@ -31,6 +31,26 @@ Creates a new local repository with the specified name
 $ git clone [url]
 Downloads a project and its entire version history
 
+StringBuilder sb = new StringBuilder();
+                        using (StreamReader sr = new StreamReader(opf))
+                        {
+                            String line;
+                            // Read and display lines from the file until the end of 
+                            // the file is reached.
+                            while ((line = sr.ReadLine()) != null)
+                            {
+                                MessageBox.Show(line);
+                                sb.AppendLine(line);
+                            }
+                        }
+
+                        string allines = sb.ToString();
+
+                        if (Regex.IsMatch(allines, @""))
+                        {
+                            Match m = Regex.Match(allines, @"", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+                            txt.Text = m.Groups[1].Value.ToString();
+                        }
 
 REVIEW HISTORY
 Browse and inspect the evolution of project files
